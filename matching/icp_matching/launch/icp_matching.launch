@@ -1,0 +1,10 @@
+<launch>
+  <arg name="input" default="/home/ken/workspace/PCL/icp/input.pcd" />
+  <arg name="target" default="/home/ken/workspace/PCL/icp/target.pcd" />
+
+  <node pkg="icp_matching" type="icp_matching_node" name="icp_matching_node" output="screen">
+  	<param name="input" value="$(arg input)" />
+    <param name="target" value="$(arg target)" />
+  </node>
+
+</launch>

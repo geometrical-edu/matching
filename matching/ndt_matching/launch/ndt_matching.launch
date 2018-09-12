@@ -1,0 +1,18 @@
+<launch>
+  <arg name="input" default="/home/ken/workspace/PCL/icp/input.pcd" />
+  <arg name="target" default="/home/ken/workspace/PCL/icp/target.pcd" />
+  <arg name="leaf_size" default="2.0" />
+  <arg name="ndt_res" default="1.0" />
+  <arg name="step_size" default="0.1" />
+  <arg name="trans_eps" default="0.01" />
+
+  <node pkg="ndt_matching" type="ndt_matching_node" name="ndt_matching_node" output="screen">
+  	<param name="input" value="$(arg input)" />
+    <param name="target" value="$(arg target)" />
+    <param name="leaf_size" value="$(arg leaf_size)" />
+    <param name="ndt_res" value="$(arg ndt_res)" />
+    <param name="step_size" value="$(arg step_size)" />
+    <param name="trans_eps" value="$(arg trans_eps)" />
+  </node>
+
+</launch>
